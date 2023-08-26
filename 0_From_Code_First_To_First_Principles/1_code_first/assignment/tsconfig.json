@@ -9,7 +9,12 @@
     "strict": true,
     "esModuleInterop": true,
     "types": ["node", "jest"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "sourceMap": true
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.spec.ts"]
