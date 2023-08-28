@@ -13,7 +13,7 @@ import { fizzbuzz } from "./fizzbuzz";
 // any non-number (you decide, throw an Error or handle some other way)
 
 describe("fizzbuzz", () => {
-  it("should print fizzbuzz", () => {
-    expect(fizzbuzz(15)).toEqual("fizzbuzz");
+  it("3 should return Fizz", () => {
+    expect(fizzbuzz(3)).toEqual("Fizz");
   });
 });
