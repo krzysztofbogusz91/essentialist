@@ -25,7 +25,15 @@ describe("fizzbuzz", () => {
     expect(fizzbuzz(n)).toEqual("Buzz");
   });
 
-  it("43 should return 43", () => {
-    expect(fizzbuzz(43)).toEqual("43");
+  it.each([1, 2, 2224])("should return %i when given %i", (n) => {
+    expect(fizzbuzz(n)).toEqual(n.toString());
+  });
+
+  it("should return Fizz for -12", () => {
+    expect(fizzbuzz(-12)).toEqual("Fizz");
+  });
+
+  it("should return value if not a number", () => {
+    expect(fizzbuzz(undefined as any)).toEqual("foo");
   });
 });
