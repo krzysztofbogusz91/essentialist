@@ -17,6 +17,10 @@ describe("fizzbuzz", () => {
     expect(fizzbuzz(n)).toEqual("Fizz");
   });
 
+  it.each([15, 45, 90])("should return Buzz when given %i", (n) => {
+    expect(fizzbuzz(n)).toEqual("FizzBuzz");
+  });
+
   it("3 should return Fizz", () => {
     expect(fizzbuzz(3)).toEqual("Fizz");
   });
@@ -31,9 +35,5 @@ describe("fizzbuzz", () => {
 
   it("43 should return 43", () => {
     expect(fizzbuzz(43)).toEqual("43");
-  });
-
-  it("45 should return FizzBuzz", () => {
-    expect(fizzbuzz(45)).toEqual("FizzBuzz");
   });
 });
