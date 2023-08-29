@@ -34,6 +34,6 @@ describe("fizzbuzz", () => {
   });
 
   it("should return value if not a number", () => {
-    expect(fizzbuzz(undefined as any)).toEqual("foo");
+    expect(fizzbuzz(undefined as any)).toEqual(undefined);
   });
 });
