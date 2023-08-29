@@ -13,6 +13,10 @@ import { fizzbuzz } from "./fizzbuzz";
 // any non-number (you decide, throw an Error or handle some other way)
 
 describe("fizzbuzz", () => {
+  it.each([3, 9, 42])("should return Fizz when given %i", (n) => {
+    expect(fizzbuzz(n)).toEqual("Fizz");
+  });
+
   it("3 should return Fizz", () => {
     expect(fizzbuzz(3)).toEqual("Fizz");
   });
@@ -23,10 +27,6 @@ describe("fizzbuzz", () => {
 
   it("15 should return FizzBuzz", () => {
     expect(fizzbuzz(15)).toEqual("FizzBuzz");
-  });
-
-  it("9 should return Fizz", () => {
-    expect(fizzbuzz(9)).toEqual("Fizz");
   });
 
   it("43 should return 43", () => {
