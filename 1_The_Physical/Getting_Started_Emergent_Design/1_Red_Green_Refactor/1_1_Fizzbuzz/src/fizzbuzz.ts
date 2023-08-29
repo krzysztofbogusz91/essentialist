@@ -5,6 +5,8 @@ export const fizzbuzz = (n: number): string => {
   if (n === 5) {
     return "Buzz";
   }
-
-  return "Fizz";
+  if (n % 3 === 0) {
+    return "Fizz";
+  }
+  return n.toString();
 };
