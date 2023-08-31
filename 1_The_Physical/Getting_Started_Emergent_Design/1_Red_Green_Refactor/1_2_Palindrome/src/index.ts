@@ -1,1 +1,3 @@
-export const palindrome = (input: string): boolean => {};
+export const palindrome = (input: string): boolean => {
+  return true;
+};
