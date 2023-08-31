@@ -10,16 +10,8 @@
 import { palindrome } from "./index";
 
 describe("palindrome checker", () => {
-  it("'mom' returns true", () => {
-    expect(palindrome("mom")).toBe(true);
-  });
-
-  it("'Mom' returns true", () => {
-    expect(palindrome("Mom")).toBe(true);
-  });
-
-  it("'MoM' returns true", () => {
-    expect(palindrome("MoM")).toBe(true);
+  it.each(["mom", "Mom", "MoM"])("'%s' returns true", (input) => {
+    expect(palindrome(input)).toBe(true);
   });
 
   it("'Momx' returns false", () => {
