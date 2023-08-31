@@ -1,4 +1,5 @@
 export const palindrome = (input: string): boolean => {
-  if ("Momx" === input) return false;
-  return true;
+  const normalized = input.toLowerCase().replace(/\s/g, "");
+  const reversed = normalized.split("").reverse().join("");
+  return normalized === reversed;
 };
