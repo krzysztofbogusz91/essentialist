@@ -13,4 +13,16 @@ describe("palindrome checker", () => {
   it("'mom' returns true", () => {
     expect(palindrome("mom")).toBe(true);
   });
+
+  it("'Mom' returns true", () => {
+    expect(palindrome("Mom")).toBe(true);
+  });
+
+  it("'MoM' returns true", () => {
+    expect(palindrome("MoM")).toBe(true);
+  });
+
+  it("'Momx' returns false", () => {
+    expect(palindrome("Momx")).toBe(false);
+  });
 });
