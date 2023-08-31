@@ -10,11 +10,22 @@
 import { palindrome } from "./index";
 
 describe("palindrome checker", () => {
-  it.each(["mom", "Mom", "MoM"])("'%s' returns true", (input) => {
+  it.each([
+    "mom",
+    "Mom",
+    "MoM",
+    "xMomx",
+    "Was It A Rat I Saw",
+    "Never Odd or Even",
+  ])("'%s' returns true", (input) => {
     expect(palindrome(input)).toBe(true);
   });
 
   it("'Momx' returns false", () => {
     expect(palindrome("Momx")).toBe(false);
+  });
+
+  it("'Never Odd or Even1' returns false", () => {
+    expect(palindrome("Never Odd or Even1")).toBe(false);
   });
 });
